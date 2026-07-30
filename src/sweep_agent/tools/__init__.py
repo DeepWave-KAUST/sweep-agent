@@ -120,5 +120,5 @@ import sweep_agent.tools.orchestrate      # noqa: E402,F401
 import sweep_agent.tools.synth            # noqa: E402,F401
 import sweep_agent.tools.analysis         # noqa: E402,F401
 import sweep_agent.tools.forward_sweep    # noqa: E402,F401
-
+import sweep_agent.tools.visco_forward_sweep
 __all__ = ["Tool", "ToolResult", "Registry", "registry", "register"]

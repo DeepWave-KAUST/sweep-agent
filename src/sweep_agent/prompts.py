@@ -33,6 +33,12 @@ for you. Map what they want to a workflow:
       solver directly and is the ONLY way to run a shot without the sweep_tasks
       tier — use it as the fallback whenever build_forward_spec /
       run_forward_and_plot say "not importable".
+      - ATTENUATING / VISCO-ACOUSTIC forward (Q / attenuation / lossy / 衰减) →
+      run_visco_forward_sweep(vp_path, dh, dt, nt|record_length_s, fm, q,
+      phase_shift, amplitude_damping). Use THIS (not run_forward_sweep) when
+      attenuation is involved — ViscoAcoustic needs three models. Switches:
+      phase_shift (dispersion) + amplitude_damping (dissipation); both off =
+      acoustic, both on = full visco-acoustic.
 - WAVEFIELD — see the wave / snapshots / how it propagates / a movie or gif /
   波场 / 快照 / 看波怎么传播 / 动画
       • To ANIMATE one wavefield (a GIF/movie of the wave propagating) →
